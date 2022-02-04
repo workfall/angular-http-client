@@ -1,0 +1,24 @@
+<hello name="{{ name }}"></hello>
+<p>{{ message }} :)</p>
+
+<div *ngIf="allPosts?.length > 0">
+  <h3>Posts</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+        <!-- <th>User id</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of allPosts">
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+        <!-- <td>{{item.userId}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
